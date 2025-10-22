@@ -1,20 +1,20 @@
-# how-to-bind-combobox-column-ItemsSource-from-view-model-in-wpf-and-uwp-treegrid-in-mvvm
+# How to Bind Column ItemsSource from ViewModel in WPF / UWP TreeGrid in MVVM?
 
-This example illustrates how to bind the ComboBox column's `ItemsSource` using MVVM in both [WPF TreeGrid](https://www.syncfusion.com/wpf-controls/treegrid) and [UWP TreeGrid](https://www.syncfusion.com/uwp-ui-controls/treegrid)
+This example illustrates how to bind the ComboBox column's **ItemsSource** using MVVM in [WPF TreeGrid](https://www.syncfusion.com/wpf-controls/treegrid) / [UWP TreeGrid](https://www.syncfusion.com/uwp-ui-controls/treegrid) (SfTreeGrid).
 
-You can bind the `ItemsSource` from ViewModel to [TreeGridComboBoxColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridComboBoxColumn.html) or using `ElementName` binding.
+You can bind the **ItemsSource** from ViewModel to [TreeGridComboBoxColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.TreeGridComboBoxColumn.html) or using **ElementName** binding.
 
-## XAML code:
+### XAML:
 
 ``` xml
 <syncfusion:TreeGridComboBoxColumn AllowEditing="True" 
                                    MappingName="Title"
                                    HeaderText="Title"
                                    ItemsSource="{Binding DataContext.TitleList,
-                                                                     ElementName=treeGrid}" />
+                                                ElementName=treeGrid}" />
 ```
 
-## C# ViewModel:
+### C# ViewModel:
 ``` c#
 private ObservableCollection<string> titleList;
 public ObservableCollection<string> TitleList
@@ -23,3 +23,5 @@ public ObservableCollection<string> TitleList
      set { titleList = value; }
 }
 ```
+
+![How to Bind Column ItemsSource from ViewModel in WPF / UWP TreeGrid in MVVM](Bind_combobox_column_ItemsSource_from_view_model.png)
