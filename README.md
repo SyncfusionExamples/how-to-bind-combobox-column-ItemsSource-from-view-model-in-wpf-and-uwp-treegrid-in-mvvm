@@ -17,6 +17,7 @@ You can bind the **ItemsSource** from ViewModel to [TreeGridComboBoxColumn](http
 ### C# ViewModel:
 ``` c#
 private ObservableCollection<string> titleList;
+
 public ObservableCollection<string> TitleList
 {
      get { return titleList; }
